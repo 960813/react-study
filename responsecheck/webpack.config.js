@@ -1,14 +1,10 @@
 const path = require('path');
-
 const webpack = require('webpack');
-// entry
-// module
-// plugins
-// output
+
 module.exports = {
-    name: 'gugudan-setting',
+    name: 'response-check-setting',
     mode: 'development', // 실서비스: production
-    devtool: 'eval', // 실서비스: hidden-source-map
+    devtool: 'eval', // 빠르게 하겠다
     resolve: {
         extensions: ['.js', '.jsx']
     },
@@ -33,6 +29,10 @@ module.exports = {
                     }],
                     '@babel/preset-react'
                 ],
+                plugins: [
+                    '@babel/plugin-proposal-class-properties',
+                    'react-hot-loader/babel'
+                ]
             },
         }],
     },
@@ -43,6 +43,7 @@ module.exports = {
 
     output: {
         path: path.join(__dirname, 'dist'), // C:\Users\martin\Documents\projects\react_std\dist
-        filename: 'app.js'
+        filename: 'app.js',
+        publicPath: '/dist' // app.use('/dist', express.static(__dirname,'dist'))
     }, // 출력
 };
