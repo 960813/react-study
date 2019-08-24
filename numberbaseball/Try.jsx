@@ -1,6 +1,7 @@
-import React from 'react';
+const React = require('react');
+const { memo } = React;
 
-const Try = React.memo(({ tryInfo }) =>{
+const Try = memo(({ tryInfo }) =>{
     return (
         <li>
             <div>{tryInfo.try}</div>
@@ -8,5 +9,5 @@ const Try = React.memo(({ tryInfo }) =>{
         </li>
     );
 });
+
 module.exports = Try;
-//export default Try;

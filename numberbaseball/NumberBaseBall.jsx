@@ -1,5 +1,6 @@
-import React from 'react';
-//import Try from './Try';
+const React = require('react');
+const { memo } = React;
+
 const Try = require('./Try');
 
 const {useState, useRef } = React;
@@ -14,7 +15,7 @@ function getNumbers() { // 숫자 네 개를 겹치지 않고 랜덤하게 뽑�
     return array;
 }
 
-const NumberBaseBall = React.memo(() => {
+const NumberBaseBall = memo(() => {
     const [answer,setAnswer] = useState(getNumbers());
     const [value, setValue] = useState('');
     const [result, setResult] = useState('');
@@ -85,5 +86,5 @@ const NumberBaseBall = React.memo(() => {
         </>
     );
 });
+
 module.exports = NumberBaseBall;
-//export default NumberBaseBall;
