@@ -3,8 +3,8 @@ const webpack = require('webpack');
 
 module.exports = {
     name: 'tictactoe-setting',
-    mode: 'development', // 실서비스: production
-    devtool: 'eval', // 빠르게 하겠다
+    mode: 'production', // 실서비스: production 개발 : development
+    devtool: 'hidden-source-map', // 실서비스: hidden-source-map 개발 : eval
     resolve: {
         extensions: ['.js', '.jsx']
     },
@@ -23,7 +23,7 @@ module.exports = {
                 presets: [
                     ['@babel/preset-env', {
                         targets: {
-                            browsers: ['> 90% in KR', 'last 2 chrome versions'] // browserslist
+                            browsers: ['> 5% in KR', 'last 2 chrome versions'] // browserslist
                         },
                         debug: true
                     }],
