@@ -2,9 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    name: 'tictactoe-setting',
-    mode: 'production', // 실서비스: production 개발 : development
-    devtool: 'hidden-source-map', // 실서비스: hidden-source-map 개발 : eval
+    name: 'minesearch-setting',
+    mode: 'development', // 실서비스: production 개발 : development
+    devtool: 'eval', // 실서비스: hidden-source-map 개발 : eval
     resolve: {
         extensions: ['.js', '.jsx']
     },

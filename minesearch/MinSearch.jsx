@@ -152,9 +152,9 @@ const reducer = (state, action) => {
                 if (tableData[row][cell] === CODE.NORMAL){
                     opencount += 1;
                 }
-                console.log(opencount);
                 tableData[row][cell] = count;
             };
+            console.log(action.row, action.cell);
             checkArround(action.row, action.cell);
             let halted = false;
             let result = '';
